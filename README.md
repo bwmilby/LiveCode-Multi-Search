@@ -24,7 +24,7 @@ The online dictionary is on my hosting. If you would like to have your own hoste
 			displayLibraryChooser();
 			
 			goEntryName('tLibraryName', 'tEntryName', 'tEntryType');
-			document.getElementById("uifiler").focus();
+			document.getElementById("ui_filer").focus();
 		});
 	</script>
   
@@ -52,7 +52,7 @@ The online dictionary is on my hosting. If you would like to have your own hoste
 			displayLibraryChooser();
 			
 			goEntryName('tLibraryName', 'tEntryName', 'tEntryType');
-			document.getElementById("uifiler").focus();
+			document.getElementById("ui_filer").focus();
 			$('#ui_filer').keyup();
 		});
 	</script
