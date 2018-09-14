@@ -34,14 +34,13 @@ As is the online dictionary is on my hosting. If you would like to have your own
     function getURLParameter(e) {
         return decodeURI((new RegExp(e + "=(.+?)(&|$)").exec(location.search) || [, ""])[1]);
     }
-
-if (getURLParameter("search") === "") {
+    if (getURLParameter("search") === "") {
     console.log("No URL param value found.");
-} else {
+    } else {
 
 
     document.getElementById("ui_filer").value = getURLParameter("search");
-} </script>
+    } </script>
 
 
 	<script>
