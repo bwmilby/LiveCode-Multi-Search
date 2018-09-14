@@ -40,9 +40,10 @@ if (getURLParameter("search") === "") {
 } else {
 
 
-document.getElementById("uifiler").value = getURLParameter("search");
+document.getElementById("ui_filer").value = getURLParameter("search");
 }
 </script>
+
 
 <script>
 $(document).ready(function() {
@@ -53,8 +54,8 @@ setEdition('commercial');
             displayLibraryChooser();
 
             goEntryName('tLibraryName', 'tEntryName', 'tEntryType');
-            document.getElementById("uifiler").focus();
-            $('#uifiler').keyup();
+            document.getElementById("ui_filer").focus();
+            $('#ui_filer').keyup();
 
 
 });
