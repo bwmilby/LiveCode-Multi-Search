@@ -11,7 +11,7 @@ The online dictionary was created using the WebDocMaker by
 Brian Milby https://github.com/bwmilby/lc-misc/tree/master/WebDocMaker
 the output modified to accept url perameters.
 
-As is the online dictionary is on my hosting. If you would like to have your own hosted dictionary, then generate the files using WebDocMaker and then at the end of the api.html file, replace
+The online dictionary is on my hosting. If you would like to have your own hosted dictionary, then generate the files using WebDocMaker and then at the end of the api.html file, replace
 
  
 	
