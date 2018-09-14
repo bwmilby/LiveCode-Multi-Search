@@ -1,5 +1,7 @@
 # LiveCode-Multi-Search
 
+![LiveCode-Multi-Search](https://2108.co.uk/LCDict/LCMultiSearch.png)
+
 **One Search box Seven sites searched**
 Search across
 LiveCode Forum, Nabble Forum, StackOverflow, LiveCode Dictionary, LiveCode Lessons, GitHub and Github Gists all from one search box!
