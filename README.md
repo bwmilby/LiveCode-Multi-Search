@@ -13,7 +13,7 @@ the output modified to accept url perameters.
 
 As is the online dictionary is on my hosting. If you would like to have your own hosted dictionary, then generate the files using WebDocMaker and then at the end of the api.html file, replace
 
-<script charset="UTF-8" src="./builtapi.js"></script>  
+ 
 	<script src="./js/dictionaryfunctions.js"></script>	
 	<script>
 		$(document).ready(function(e)
@@ -30,36 +30,35 @@ As is the online dictionary is on my hosting. If you would like to have your own
   
   with
   
-<script>
-function getURLParameter(e) {
-  return decodeURI((new RegExp(e + "=(.+?)(&|$)").exec(location.search) || [, ""])[1]);
-}
+	< script >
+    function getURLParameter(e) {
+        return decodeURI((new RegExp(e + "=(.+?)(&|$)").exec(location.search) || [, ""])[1]);
+    }
 
 if (getURLParameter("search") === "") {
-  console.log("No URL param value found.");
+    console.log("No URL param value found.");
 } else {
 
 
-document.getElementById("ui_filer").value = getURLParameter("search");
-}
-</script>
+    document.getElementById("ui_filer").value = getURLParameter("search");
+} </script>
 
 
-<script>
-$(document).ready(function() {
+<script >
+    $(document).ready(function() {
 
-setEdition('commercial');
-            setActions();
-            dataFilter();
-            displayLibraryChooser();
+        setEdition('commercial');
+        setActions();
+        dataFilter();
+        displayLibraryChooser();
 
-            goEntryName('tLibraryName', 'tEntryName', 'tEntryType');
-            document.getElementById("ui_filer").focus();
-            $('#ui_filer').keyup();
+        goEntryName('tLibraryName', 'tEntryName', 'tEntryType');
+        document.getElementById("ui_filer").focus();
+        $('#ui_filer').keyup();
 
 
-});
-</script>
+    }); </script>
+
 
 to allow passing of the search perameters and to force trigger the keyup event in the search input field.
 
