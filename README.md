@@ -1,6 +1,6 @@
 # LiveCode-Multi-Search
 
-One Search box Seven sites searched
+**One Search box Seven sites searched**
 Search across
 LiveCode Forum, Nabble Forum, StackOverflow, LiveCode Dictionary, LiveCode Lessons, GitHub and Github Gists all from one search box!
 
@@ -13,8 +13,8 @@ the output modified to accept url perameters.
 
 As is the online dictionary is on my hosting. If you would like to have your own hosted dictionary, then generate the files using WebDocMaker and then at the end of the api.html file, replace
 
-<script charset="UTF-8" src="./built_api.js"></script>  
-	<script src="./js/dictionary_functions.js"></script>	
+*<script charset="UTF-8" src="./builtapi.js"></script>  
+	<script src="./js/dictionaryfunctions.js"></script>	
 	<script>
 		$(document).ready(function(e)
 		{
@@ -24,13 +24,13 @@ As is the online dictionary is on my hosting. If you would like to have your own
 			displayLibraryChooser();
 			
 			goEntryName('tLibraryName', 'tEntryName', 'tEntryType');
-			document.getElementById("ui_filer").focus();
+			document.getElementById("uifiler").focus();
 		});
-	</script>
+	</script>*
   
   with
   
-<script>
+*<script>
 function getURLParameter(e) {
   return decodeURI((new RegExp(e + "=(.+?)(&|$)").exec(location.search) || [, ""])[1]);
 }
@@ -40,7 +40,7 @@ if (getURLParameter("search") === "") {
 } else {
 
 
-document.getElementById("ui_filer").value = getURLParameter("search");
+document.getElementById("uifiler").value = getURLParameter("search");
 }
 </script>
 
@@ -53,19 +53,19 @@ setEdition('commercial');
             displayLibraryChooser();
 
             goEntryName('tLibraryName', 'tEntryName', 'tEntryType');
-            document.getElementById("ui_filer").focus();
-            $('#ui_filer').keyup();
+            document.getElementById("uifiler").focus();
+            $('#uifiler').keyup();
 
 
 });
-</script>
+</script>*
 
 to allow passing of the search perameters and to force trigger the keyup event in the search input field.
 
 You will also need to change the url here
 
 --LC Dictionary
-   put "   https://2108.co.uk/LCDict/api.html?search=" & fld "Search" into tSearchLCDict
+   put "   ***https://2108.co.uk/LCDict/api.html?search=***" & fld "Search" into tSearchLCDict
    set the url of widget "Browser LC Dictionary" to tSearchLCDict
    
 which can be found in the maingroupid1032searchbuttonbehavior.livecodescript file
