@@ -48,7 +48,7 @@ on mouseUp pMouseButton
    set the url of widget "Browser GitHub" to tSearchGitHub
    
    --LC Dictionary
-   put "   https://2108.co.uk/LCDict/api.html?search=" & fld "Search" into tSearchLCDict
+   put "http://2108.co.uk/LCDict/api.html?search=" & fld "Search" into tSearchLCDict
    set the url of widget "Browser LC Dictionary" to tSearchLCDict
    
    
