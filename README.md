@@ -1,5 +1,7 @@
 # LiveCode-Multi-Search
 
+Contrubutors, please use dev branch for any additions. Thank you.
+
 ![LiveCode-Multi-Search](https://2108.co.uk/LCDict/LCMultiSearch.png)
 
 **One Search box Seven sites searched**
