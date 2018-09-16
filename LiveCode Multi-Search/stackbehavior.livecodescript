@@ -1,6 +1,6 @@
 ﻿script "LiveCodeMultiSearchStackBehavior"
 --LiveCode Multi-Search - Andy piddock 11/2018
---v1.0.0
+--v1.0.2
 
 on preOpenSatck
    
