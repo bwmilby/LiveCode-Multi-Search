@@ -11,11 +11,11 @@ on preOpenSatck
    local tNamesList
    local tLabelsList
    
-   set the itemCount of widget "NavigationBar" to 7
+   set the itemCount of widget "NavigationBar" to 8
       
-   put "100,100,100,100,100,100,100" into tNumberList
-   put "LC Forum,Nabble Forum,StackOverflow,LC Dictionary,LC Lessons,GitHub,GitHub Gist" into tNamesList
-   put "LC Forum,Nabble Forum,StackOverflow,LC Dictionary,LC Lessons,GitHub,GitHub Gist" into tLabelsList
+   put "100,100,100,100,100,100,100,100" into tNumberList
+   put "LC Forum,Nabble Forum,StackOverflow,LC Dictionary,LC Lessons,GitHub,GitHub Gist,LC Wiki" into tNamesList
+   put "LC Forum,Nabble Forum,StackOverflow,LC Dictionary,LC Lessons,GitHub,GitHub Gist,LC Wiki" into tLabelsList
    
    set the width of widget "NavigationBar" to the number of items of tNamesList * 100
    
