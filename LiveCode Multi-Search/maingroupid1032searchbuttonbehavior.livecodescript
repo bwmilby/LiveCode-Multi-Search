@@ -51,6 +51,10 @@ on mouseUp pMouseButton
    put "http://2108.co.uk/LCDict/api.html?search=" & fld "Search" into tSearchLCDict
    set the url of widget "Browser LC Dictionary" to tSearchLCDict
    
+   --LC Wiki
+   put "http://livecode.wikia.com/wiki/Special:Search?query=" & fld "Search" into tSearchLCWiki
+   set the url of widget "Browser LC Wiki" to tSearchLCWiki
+   
    
 end mouseUp
 
