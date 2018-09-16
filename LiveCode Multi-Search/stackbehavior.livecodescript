@@ -25,7 +25,45 @@ on preOpenSatck
    
    set the left of widget "NavigationBar" to the left of card "Main" +80
    
+   emptyUrls
+   
 end preOpenSatck
+
+--empty browser urls
+on emptyUrls
+   
+      local tControlCount
+   local tControl
+   local tBrowserWidgetNames
+   
+   set the itemdel to comma
+   
+   --get number of controls of the current card and filter out those which are Browser widgets
+   --and combine into a comma seperated items list
+   
+   put the number of controls of this card into tControlCount
+   
+   repeat with tControl = 1 to tControlCount
+      
+      if the name of control tControl contains "Browser" then
+         put the name of control tControl & comma after tBrowserWidgetNames
+      end if
+      
+   end repeat
+   
+   --remove trailing comma
+   delete char -1 of tBrowserWidgetNames
+   
+    
+   --hide Browser widgets
+   repeat with tBrowserSelected = 1 to the number of items of tBrowserWidgetNames
+      
+      set the url of control item tBrowserSelected of tBrowserWidgetNames to empty
+      
+   end repeat
+   
+   
+end emptyUrls
 
 
 on browserNavigateBegin pUrl
