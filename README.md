@@ -4,9 +4,9 @@ Contrubutors, please use dev branch for any additions. Thank you.
 
 ![LiveCode-Multi-Search](https://2108.co.uk/LCDict/LCMultiSearch.png)
 
-**One Search box Seven sites searched**
+**One Search box Eight sites searched**
 Search across
-LiveCode Forum, Nabble Forum, StackOverflow, LiveCode Dictionary, LiveCode Lessons, GitHub and Github Gists all from one search box!
+LiveCode Forum, Nabble Forum, StackOverflow, LiveCode Dictionary, LiveCode Lessons, GitHub, Github Gists and LiveCode Wiki all from one search box!
 
 Filter Gist reults by extension
 Traverse back and forward through your searches
