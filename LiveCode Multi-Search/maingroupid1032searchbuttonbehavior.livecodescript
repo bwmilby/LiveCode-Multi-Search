@@ -22,37 +22,52 @@ on mouseUp pMouseButton
    local tSearchLCLessons
    local tSearchGitHub
    local tSearchLCDict
+   local tSearchLCWiki
+   
+   put URLEncode(fld "Search") into tSearch
    
    --Gist
-   put "https://gist.github.com/search?q=" & fld "Search" & tExtension & "&ref=opensearch" into tSearchGist
+   put "https://gist.github.com/search?q=" & tSearch & tExtension & \
+         "&ref=opensearch" into tSearchGist
    set the url of widget "Browser GitHub Gist" to tSearchGist
    
    --LC Forum
-   put "http://forums.livecode.com/search.php?keywords=" & fld "Search" into tSearchLCForum
+   put "http://forums.livecode.com/search.php?keywords=" & tSearch \
+         into tSearchLCForum
    set the url of widget "Browser LC Forum" to tSearchLCForum
    
    --Nabble
-   put "http://runtime-revolution.278305.n4.nabble.com/template/NamlServlet.jtp?macro=search_page&node=278305&query=" & fld "Search" into tSearchNabbleForum
+   put "http://runtime-revolution.278305.n4.nabble.com/template/" & \
+         "NamlServlet.jtp?macro=search_page&node=278305&query=" & \
+         tSearch into tSearchNabbleForum
    set the url of widget "Browser Nabble Forum" to tSearchNabbleForum
    
    --StackOverflow
-   put "https://stackoverflow.com/search?q=%5Blivecode%5D+" & fld "Search" into tSearchStackOverflow
+   put "https://stackoverflow.com/search?q=%5Blivecode%5D+" & tSearch \
+         into tSearchStackOverflow
    set the url of widget "Browser StackOverflow" to tSearchStackOverflow
    
    --LC Lessons
-   put "http://lessons.livecode.com/searches?&text=" & fld "Search" & "&commit=Search" into tSearchLCLessons
+   put "http://lessons.livecode.com/searches?&text=" & tSearch & \
+         "&commit=Search" into tSearchLCLessons
    set the url of widget "Browser LC Lessons" to tSearchLCLessons
    
    --GitHub
-   put "https://github.com/search?q=livecode " & fld "Search" into tSearchGitHub
+   put "https://github.com/search?q=livecode+" & tSearch into tSearchGitHub
    set the url of widget "Browser GitHub" to tSearchGitHub
    
    --LC Dictionary
-   put "http://2108.co.uk/LCDict/api.html?search=" & fld "Search" into tSearchLCDict
-   set the url of widget "Browser LC Dictionary" to tSearchLCDict
-   
+   do "displayEntryListGrep(" & quote & fld "Search" & quote & ")" \
+         in widget "Browser LC Dictionary"
+   -- don't need this code if using the above method.  The search field
+   -- does not get populated, but the search is executed immediately
+   -- requires the preload in the preOpenStack/emptyURLs handler
+   --put "http://2108.co.uk/LCDict/api.html?search=" & fld "Search" into tSearchLCDict
+   --set the url of widget "Browser LC Dictionary" to tSearchLCDict
+
    --LC Wiki
-   put "http://livecode.wikia.com/wiki/Special:Search?query=" & fld "Search" into tSearchLCWiki
+   put "http://livecode.wikia.com/wiki/Special:Search?query=" & tSearch \
+         into tSearchLCWiki
    set the url of widget "Browser LC Wiki" to tSearchLCWiki
    
    

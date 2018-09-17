@@ -46,7 +46,7 @@ on emptyUrls
    repeat with tControl = 1 to tControlCount
       
       if the name of control tControl of card "Main" of stack "LiveCode Multi-Search" contains "Browser" then
-         put the name of control tControl of card "Main" of stack "LiveCode Multi-Search" & comma after tBrowserWidgetNames
+         put the short name of control tControl of card "Main" of stack "LiveCode Multi-Search" & comma after tBrowserWidgetNames
       end if
       
    end repeat
@@ -55,13 +55,15 @@ on emptyUrls
    delete char -1 of tBrowserWidgetNames
    
    
-   --hide Browser widgets
-   repeat with tBrowserSelected = 1 to the number of items of tBrowserWidgetNames
+   --clear Browser widget URLs
+   repeat for each item tBrowserSelected in tBrowserWidgetNames
       
-      set the url of control item tBrowserSelected of tBrowserWidgetNames of card "Main" of stack "LiveCode Multi-Search" to empty
+      set the url of control tBrowserSelected of card "Main" of stack "LiveCode Multi-Search" to empty
       
    end repeat
    
+   -- preload dictionary to have the database file downloaded and available
+   set the url of widget "Browser LC Dictionary" to "http://2108.co.uk/LCDict/api.html"
    
 end emptyUrls
 
